@@ -14,6 +14,9 @@ app.use(async(ctx, next) => {
     try {
         await next();
     } catch (err) {
+        console.log('Error Start =====')
+        console.log(err)
+        console.log('Error End =====')
         if (err.data === 'is.not.image.type') {
             ctx.status = 415;
             ctx.body = {
