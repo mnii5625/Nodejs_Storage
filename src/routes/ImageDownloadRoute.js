@@ -9,5 +9,5 @@ module.exports = router;
 router.get('/images/:name', async (ctx) => {
     const { name } = ctx.params;
     ctx.set("Content-Type", "image/webp");
-    ctx.body = fs.readFileSync(Path.join("D://images/" + name));
+    ctx.body = fs.readFileSync(Path.join("/usr/local/images/" + name));
 });
