@@ -46,6 +46,6 @@ app.use(router.routes()).use(router.allowedMethods());
 app.use(ImageUploadRoute.routes()).use(ImageUploadRoute.allowedMethods());
 app.use(ImageDownloadRoute.routes()).use(ImageDownloadRoute.allowedMethods());
 
-app.listen(3000, () => {
-    console.log('Storage Server is listening to port 3000');
+app.listen(2000, () => {
+    console.log('Storage Server is listening to port 2000');
 })
