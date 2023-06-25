@@ -12,7 +12,7 @@ sharp.cache(false);
 const upload = multer({
     storage: multer.diskStorage({
         destination: (req, file, cb) => {
-            cb(null, 'upload/');
+            cb(null, '/usr/local/images/upload/');
         },
         filename: (req, file, cb) => {
             let newFileName = new Date().valueOf() + path.extname(file.originalname);
