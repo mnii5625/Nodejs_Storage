@@ -65,7 +65,7 @@ router.post('/upload/image', upload.single('file'), async (ctx) => {
             .rotate(rotate)
             .flip(vertical)
             .flop(horizontal)
-            .toFile("D://images/" + newFileName)
+            .toFile("/usr/local/images/" + newFileName)
             .then(() =>  {
                 fs.unlink(filePath, (err) => {
                     if (err) throw err;
