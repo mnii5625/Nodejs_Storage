@@ -33,6 +33,7 @@ app.use(async(ctx, next) => {
                 message: 'File not found'
             };
         } else {
+            console.log(err)
             ctx.status = 500;
             ctx.body = {
                 data: {},
